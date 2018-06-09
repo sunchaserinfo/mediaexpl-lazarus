@@ -2,3 +2,5 @@
 *.dcu
 *.ddp
 *.exe
+*.cfg
+*.dof
