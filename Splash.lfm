@@ -13,10 +13,8 @@ object SplashForm: TSplashForm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsStayOnTop
-  OldCreateOrder = True
   Position = poScreenCenter
   PixelsPerInch = 96
-  TextHeight = 13
   object Image1: TImage
     Left = 0
     Top = 19
@@ -439,7 +437,7 @@ object SplashForm: TSplashForm
     Height = 16
     Align = alBottom
     Alignment = taCenter
-    Caption = #169' 2000, 2018 Christian Archer'
+    Caption = '© 2000, 2018 Christian Archer'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13

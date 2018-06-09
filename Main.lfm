@@ -15,13 +15,11 @@ object MainForm: TMainForm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   Menu = MainMenu1
-  OldCreateOrder = False
   Position = poScreenCenter
   Scaled = False
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 13
   object BottomPanel: TPanel
     Left = 0
     Top = 266
@@ -30,9 +28,6 @@ object MainForm: TMainForm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    DesignSize = (
-      614
-      95)
     object pbBottom: TPaintBox
       Left = 0
       Top = 0
@@ -42,8 +37,8 @@ object MainForm: TMainForm
       OnPaint = pbBottomPaint
     end
     object lbInfo: TLabel
-      Left = 34
-      Top = 6
+      Left = 32
+      Top = 4
       Width = 5
       Height = 13
       Font.Charset = DEFAULT_CHARSET
@@ -55,8 +50,8 @@ object MainForm: TMainForm
       Transparent = True
     end
     object lbTime: TLabel
-      Left = 523
-      Top = 6
+      Left = 521
+      Top = 4
       Width = 65
       Height = 13
       Alignment = taRightJustify
@@ -71,8 +66,8 @@ object MainForm: TMainForm
       Transparent = True
     end
     object imgPlay: TImage
-      Left = 88
-      Top = 50
+      Left = 86
+      Top = 48
       Width = 32
       Height = 32
       Cursor = crHandPoint
@@ -81,8 +76,8 @@ object MainForm: TMainForm
       OnMouseUp = imgPlayMouseUp
     end
     object imgPause: TImage
-      Left = 120
-      Top = 50
+      Left = 118
+      Top = 48
       Width = 32
       Height = 32
       Cursor = crHandPoint
@@ -91,8 +86,8 @@ object MainForm: TMainForm
       OnMouseUp = imgPauseMouseUp
     end
     object imgStop: TImage
-      Left = 152
-      Top = 50
+      Left = 150
+      Top = 48
       Width = 32
       Height = 32
       Cursor = crHandPoint
@@ -101,8 +96,8 @@ object MainForm: TMainForm
       OnMouseUp = imgStopMouseUp
     end
     object imgSymbol: TImage
-      Left = 26
-      Top = 36
+      Left = 24
+      Top = 34
       Width = 40
       Height = 40
       Cursor = crHandPoint
@@ -113,8 +108,8 @@ object MainForm: TMainForm
     end
     object pbVolume: TPaintBox
       Tag = 128
-      Left = 208
-      Top = 54
+      Left = 206
+      Top = 52
       Width = 95
       Height = 24
       OnMouseDown = pbVolumeMouseDown
@@ -123,8 +118,8 @@ object MainForm: TMainForm
       OnPaint = pbVolumePaint
     end
     object pbPos: TProgressBar
-      Left = 88
-      Top = 28
+      Left = 86
+      Top = 26
       Width = 512
       Height = 16
       Cursor = crHandPoint
@@ -177,7 +172,7 @@ object MainForm: TMainForm
     BevelOuter = bvNone
     TabOrder = 3
     object Splitter1: TSplitter
-      Left = 241
+      Left = 239
       Top = 0
       Height = 250
     end
@@ -189,29 +184,23 @@ object MainForm: TMainForm
       ObjectTypes = [otFolders]
       Root = 'rfDesktop'
       ShellListView = slvFile
-      UseShellImages = True
       Align = alLeft
-      AutoRefresh = True
-      Ctl3D = True
       Indent = 19
       ParentColor = False
-      ParentCtl3D = False
       RightClickSelect = True
       ShowRoot = False
       TabOrder = 0
     end
     object slvFile: TShellListView
-      Left = 244
+      Left = 242
       Top = 0
       Width = 274
       Height = 250
       ObjectTypes = [otFolders, otNonFolders]
       Root = 'rfDesktop'
       ShellTreeView = stvTree
-      Sorted = True
       Align = alClient
       ReadOnly = False
-      GridLines = True
       HideSelection = False
       RowSelect = True
       OnChange = slvFileChange
@@ -237,7 +226,7 @@ object MainForm: TMainForm
     end
     object btnBrowser: TImage
       Left = 0
-      Top = 8
+      Top = 6
       Width = 80
       Height = 40
       Cursor = crHandPoint

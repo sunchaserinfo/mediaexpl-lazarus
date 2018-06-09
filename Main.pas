@@ -1,16 +1,17 @@
 unit Main;
 
+{$MODE Delphi}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, ComCtrls, ShellCtrls, StdCtrls, XPMan, ioplug, Menus,
+  Windows, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, ComCtrls, ShellCtrls, StdCtrls, ioplug, Menus,
   ShellAPI;
 
 type
   TMainForm = class(TForm)
     BottomPanel: TPanel;
-    XPManifest: TXPManifest;
     Timer1: TTimer;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
@@ -126,9 +127,9 @@ var
 
 implementation
 
-uses About, splash;
+uses About, Splash;
 
-{$R *.dfm}
+{$R *.lfm}
 {$R DefSkin.res}
 
 (*----- Plugin Func START ------------------*)
@@ -224,7 +225,7 @@ begin
       if (initInputDll(dllname)) then
       begin
         dll:=getinmodule;
-        dll.hMainWindow:=Application.Handle;
+        dll.hMainWindow:=MainForm.Handle;
         dll.hDllInstance:=InputDllHandle;
         dll.outMod:=plOut;
         dll.init;
@@ -309,7 +310,7 @@ begin
 
   plIn:=getinmodule;
 
-  plIn.hMainWindow:=Application.Handle;
+  plIn.hMainWindow:=MainForm.Handle;
   plIn.hDllInstance:=InputDllHandle;
   plIn.outMod:=plOut;
   plIn.init;
@@ -344,7 +345,7 @@ begin
 
   plOut:=getoutmodule;
 
-  plOut.hMainWindow:=application.Handle;
+  plOut.hMainWindow:=MainForm.Handle;
   plOut.hDllInstance:=OutputDllHandle;
   plOut.init;
   plOut.setvolume(MainForm.pbVolume.Tag);
@@ -474,10 +475,9 @@ end;
 procedure TMainForm.slvFileChange(Sender: TObject; Item: TListItem;
   Change: TItemChange);
 begin
-  if (slvFile.SelectedFolder = nil) then exit;
-//  if (not FileExists(slvFile.SelectedFolder.PathName())) then exit;
+  if (slvFile.Selected = nil) then exit;
   try
-    OpenFile(slvFile.SelectedFolder.PathName());
+    OpenFile(slvFile.GetPathFromItem(slvFile.Selected));
   finally
   end;
 end;

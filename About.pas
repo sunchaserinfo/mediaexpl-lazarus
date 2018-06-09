@@ -1,5 +1,7 @@
 unit About;
 
+{$MODE Delphi}
+
 interface
 
 uses
@@ -37,7 +39,7 @@ var
 
 implementation
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TAboutBox.lbURLMouseEnter(Sender: TObject);
 begin

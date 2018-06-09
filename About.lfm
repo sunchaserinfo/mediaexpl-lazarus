@@ -11,11 +11,9 @@ object AboutBox: TAboutBox
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   PixelsPerInch = 96
-  TextHeight = 13
   object imgHdr: TImage
     Left = 0
     Top = 0
@@ -3044,7 +3042,7 @@ object AboutBox: TAboutBox
     Top = 114
     Width = 140
     Height = 13
-    Caption = '© 2000-2018 Christian Archer'
+    Caption = 'Â© 2000-2018 Christian Archer'
   end
   object Bevel1: TBevel
     Left = 100

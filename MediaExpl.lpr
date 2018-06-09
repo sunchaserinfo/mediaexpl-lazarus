@@ -1,7 +1,9 @@
 program MediaExpl;
 
+{$MODE Delphi}
+
 uses
-  Forms,
+  Forms, Interfaces,
   Main in 'Main.pas' {MainForm},
   About in 'About.pas' {AboutBox},
   splash in 'Splash.pas' {SplashForm};

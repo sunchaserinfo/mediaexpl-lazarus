@@ -4,3 +4,6 @@
 *.exe
 *.cfg
 *.dof
+*.log
+*.lps
+/lib

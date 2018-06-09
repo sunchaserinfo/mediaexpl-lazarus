@@ -1,10 +1,12 @@
-unit splash;
+unit Splash;
+
+{$MODE Delphi}
 
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, jpeg;
+  ExtCtrls, StdCtrls;
 
 type
   TSplashForm = class(TForm)
@@ -24,7 +26,7 @@ var
 
 implementation
 
-{$R *.DFM}
+{$R *.lfm}
 
 procedure TSplashForm.Timer1Timer(Sender: TObject);
 begin

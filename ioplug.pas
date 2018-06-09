@@ -41,6 +41,8 @@
 
 unit ioplug;
 
+{$MODE Delphi}
+
 {$MINENUMSIZE 4}
 {$ALIGN ON}
 {$WRITEABLECONST ON}
