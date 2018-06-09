@@ -16,8 +16,7 @@ Put the plugins to the `Plugins` subdirectory at the directory with `MediaExpl.e
 
 ## License
 
-Licensed under the Apache License, Version 2.0;
-you may not use this file except in compliance with the License.
+Licensed under the Apache License, Version 2.0.
 
 ## 3rd Party
 
