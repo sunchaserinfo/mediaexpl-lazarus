@@ -1,10 +1,8 @@
 # Multimedia Explorer
 
 This is a simple Multimedia Explorer written in olden times, fixed a bit and put on GitHub.
-Written for Delphi 7, needs a bit of renovation to be run on modern compilers. It should be
-almost trivial to update it for Lazarus although directory and file lists will be quite 
-uglified. It is not trivial to upgrade it to the RAD Studio 10 though because it lacks
-`TShellTreeView` and `TShellListView` components.
+This repo contains (almost) working fork for Lazarus.
+See [sunchaserinfo/mediaexpl](https://github.com/sunchaserinfo/mediaexpl) for original Delphi 7 project.
 
 ![Screenshot](Docs/Screenshot.png)
 
