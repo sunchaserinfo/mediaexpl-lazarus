@@ -1,252 +1,255 @@
 object MainForm: TMainForm
-  Left = 153
-  Top = 207
-  Width = 630
+  Left = 380
   Height = 420
+  Top = 264
+  Width = 630
   HorzScrollBar.Visible = False
   VertScrollBar.Visible = False
   Caption = 'Multimedia Explorer'
+  ClientHeight = 400
+  ClientWidth = 630
   Color = clBtnFace
   Constraints.MinHeight = 220
   Constraints.MinWidth = 330
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   Menu = MainMenu1
-  Position = poScreenCenter
-  Scaled = False
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Scaled = False
   object BottomPanel: TPanel
     Left = 0
-    Top = 266
-    Width = 614
     Height = 95
+    Top = 305
+    Width = 630
     Align = alBottom
     BevelOuter = bvNone
+    ClientHeight = 95
+    ClientWidth = 630
     TabOrder = 0
     object pbBottom: TPaintBox
       Left = 0
-      Top = 0
-      Width = 614
       Height = 95
+      Top = 0
+      Width = 630
       Align = alClient
       OnPaint = pbBottomPaint
     end
     object lbInfo: TLabel
       Left = 32
+      Height = 1
       Top = 4
-      Width = 5
-      Height = 13
-      Font.Charset = DEFAULT_CHARSET
+      Width = 1
       Font.Color = clLime
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
+      ParentColor = False
       ParentFont = False
-      Transparent = True
     end
     object lbTime: TLabel
-      Left = 521
+      Left = 537
+      Height = 13
       Top = 4
       Width = 65
-      Height = 13
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = '0:00 / 0:00'
-      Font.Charset = DEFAULT_CHARSET
       Font.Color = clLime
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
+      ParentColor = False
       ParentFont = False
-      Transparent = True
     end
     object imgPlay: TImage
+      Cursor = crHandPoint
       Left = 86
+      Height = 32
       Top = 48
       Width = 32
-      Height = 32
-      Cursor = crHandPoint
       OnClick = bnPlayClick
       OnMouseDown = imgPlayMouseDown
       OnMouseUp = imgPlayMouseUp
     end
     object imgPause: TImage
+      Cursor = crHandPoint
       Left = 118
+      Height = 32
       Top = 48
       Width = 32
-      Height = 32
-      Cursor = crHandPoint
       OnClick = bnPauseClick
       OnMouseDown = imgPauseMouseDown
       OnMouseUp = imgPauseMouseUp
     end
     object imgStop: TImage
+      Cursor = crHandPoint
       Left = 150
+      Height = 32
       Top = 48
       Width = 32
-      Height = 32
-      Cursor = crHandPoint
       OnClick = bnStopClick
       OnMouseDown = imgStopMouseDown
       OnMouseUp = imgStopMouseUp
     end
     object imgSymbol: TImage
+      Cursor = crHandPoint
       Left = 24
+      Height = 40
+      Hint = 'https://github.com/sunchaserinfo/mediaexpl'
       Top = 34
       Width = 40
-      Height = 40
-      Cursor = crHandPoint
-      Hint = 'https://github.com/sunchaserinfo/mediaexpl'
+      OnClick = imgSymbolClick
       ParentShowHint = False
       ShowHint = True
-      OnClick = imgSymbolClick
     end
     object pbVolume: TPaintBox
       Tag = 128
       Left = 206
+      Height = 24
       Top = 52
       Width = 95
-      Height = 24
       OnMouseDown = pbVolumeMouseDown
       OnMouseMove = pbVolumeMouseMove
       OnMouseUp = pbVolumeMouseUp
       OnPaint = pbVolumePaint
     end
     object pbPos: TProgressBar
-      Left = 86
-      Top = 26
-      Width = 512
-      Height = 16
       Cursor = crHandPoint
-      Anchors = [akLeft, akTop, akRight]
+      Left = 86
+      Height = 16
+      Top = 26
+      Width = 528
+      Anchors = [akTop, akLeft, akRight]
+      OnMouseUp = pbPosMouseUp
       Smooth = True
       TabOrder = 0
-      OnMouseUp = pbPosMouseUp
     end
   end
   object RightPanel: TPanel
-    Left = 598
+    Left = 614
+    Height = 289
     Top = 16
     Width = 16
-    Height = 250
     Align = alRight
     BevelOuter = bvNone
+    ClientHeight = 289
+    ClientWidth = 16
     TabOrder = 1
     object pbRight: TPaintBox
       Left = 0
+      Height = 289
       Top = 0
       Width = 16
-      Height = 250
       Align = alClient
       OnPaint = pbRightPaint
     end
   end
   object TopPanel: TPanel
     Left = 0
-    Top = 0
-    Width = 614
     Height = 16
+    Top = 0
+    Width = 630
     Align = alTop
     BevelOuter = bvNone
+    ClientHeight = 16
+    ClientWidth = 630
     TabOrder = 2
     object pbTop: TPaintBox
       Left = 0
-      Top = 0
-      Width = 614
       Height = 16
+      Top = 0
+      Width = 630
       Align = alClient
       OnPaint = pbTopPaint
     end
   end
   object CentralPanel: TPanel
     Left = 80
+    Height = 289
     Top = 16
-    Width = 518
-    Height = 250
+    Width = 534
     Align = alClient
     BevelOuter = bvNone
+    ClientHeight = 289
+    ClientWidth = 534
     TabOrder = 3
     object Splitter1: TSplitter
-      Left = 239
+      Left = 241
+      Height = 289
       Top = 0
-      Height = 250
+      Width = 5
     end
     object stvTree: TShellTreeView
       Left = 0
+      Height = 289
       Top = 0
       Width = 241
-      Height = 250
-      ObjectTypes = [otFolders]
-      Root = 'rfDesktop'
-      ShellListView = slvFile
       Align = alLeft
+      FileSortType = fstNone
       Indent = 19
-      ParentColor = False
       RightClickSelect = True
       ShowRoot = False
       TabOrder = 0
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips, tvoThemedDraw]
+      ObjectTypes = [otFolders]
+      ShellListView = slvFile
     end
     object slvFile: TShellListView
-      Left = 242
+      Left = 246
+      Height = 289
       Top = 0
-      Width = 274
-      Height = 250
-      ObjectTypes = [otFolders, otNonFolders]
-      Root = 'rfDesktop'
-      ShellTreeView = stvTree
+      Width = 288
       Align = alClient
-      ReadOnly = False
+      Color = clDefault
       HideSelection = False
       RowSelect = True
-      OnChange = slvFileChange
       TabOrder = 1
-      ViewStyle = vsReport
+      OnChange = slvFileChange
+      ObjectTypes = [otFolders, otNonFolders]
+      ShellTreeView = stvTree
     end
   end
   object LeftPanel: TPanel
     Left = 0
+    Height = 289
     Top = 16
     Width = 80
-    Height = 250
     Align = alLeft
     BevelOuter = bvNone
+    ClientHeight = 289
+    ClientWidth = 80
     TabOrder = 4
     object pbLeft: TPaintBox
       Left = 0
+      Height = 289
       Top = 0
       Width = 80
-      Height = 250
       Align = alClient
       OnPaint = pbLeftPaint
     end
     object btnBrowser: TImage
+      Cursor = crHandPoint
       Left = 0
+      Height = 40
       Top = 6
       Width = 80
-      Height = 40
-      Cursor = crHandPoint
       OnMouseDown = btnBrowserMouseDown
       OnMouseUp = btnBrowserMouseUp
     end
   end
-  object XPManifest: TXPManifest
-    Left = 144
-    Top = 32
-  end
   object Timer1: TTimer
     Interval = 100
     OnTimer = Timer1Timer
-    Left = 80
-    Top = 32
+    left = 80
+    top = 32
   end
   object MainMenu1: TMainMenu
-    Left = 112
-    Top = 32
+    left = 112
+    top = 32
     object File1: TMenuItem
       Caption = '&File'
       object Exit1: TMenuItem
@@ -264,40 +267,6 @@ object MainForm: TMainForm
     end
     object N1: TMenuItem
       Caption = '&?'
-      object Internet1: TMenuItem
-        Caption = '&Internet'
-        Visible = False
-        object LPHomePage1: TMenuItem
-          Caption = 'LP HomePage (Eng)'
-        end
-        object LPHomePageRus1: TMenuItem
-          Caption = 'LP HomePage (Rus)'
-        end
-        object N3: TMenuItem
-          Caption = '-'
-        end
-        object ProductHomePageEng1: TMenuItem
-          Caption = 'Product HomePage (Eng)'
-          Enabled = False
-        end
-        object ProductHomePageRus1: TMenuItem
-          Caption = 'Product HomePage (Rus)'
-          Enabled = False
-        end
-        object N4: TMenuItem
-          Caption = '-'
-        end
-        object EMailUs1: TMenuItem
-          Caption = 'E-Mail Us'
-        end
-        object BugReport1: TMenuItem
-          Caption = 'Bug Report'
-        end
-      end
-      object N2: TMenuItem
-        Caption = '-'
-        Visible = False
-      end
       object About1: TMenuItem
         Caption = '&About...'
         ShortCut = 32880

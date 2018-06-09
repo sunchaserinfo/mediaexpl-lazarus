@@ -21,16 +21,6 @@ type
     Options1: TMenuItem;
     Plugins1: TMenuItem;
     pbPos: TProgressBar;
-    Internet1: TMenuItem;
-    N2: TMenuItem;
-    LPHomePage1: TMenuItem;
-    LPHomePageRus1: TMenuItem;
-    N3: TMenuItem;
-    ProductHomePageEng1: TMenuItem;
-    ProductHomePageRus1: TMenuItem;
-    N4: TMenuItem;
-    EMailUs1: TMenuItem;
-    BugReport1: TMenuItem;
     RightPanel: TPanel;
     TopPanel: TPanel;
     CentralPanel: TPanel;

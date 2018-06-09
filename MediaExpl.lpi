@@ -15,9 +15,18 @@
       <Title Value="MediaExpl"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <TextName Value="ChristianArcher.MultimediaExplorer"/>
+        <TextDesc Value="Multimedia Explorer"/>
+      </XPManifest>
+      <Icon Value="0"/>
     </General>
     <VersionInfo>
-      <StringTable ProductVersion=""/>
+      <UseVersionInfo Value="True"/>
+      <MajorVersionNr Value="4"/>
+      <BuildNr Value="2"/>
+      <StringTable CompanyName="Christian Archer" FileDescription="Multimedia Explorer" InternalName="MediaExpl" LegalCopyright="© 2000 Christian Archer" OriginalFilename="MediaExpl.exe" ProductName="Multimedia Explorer" ProductVersion="4.0.0-beta2"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
@@ -43,12 +52,16 @@
       <Unit1>
         <Filename Value="Main.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
         <Filename Value="About.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutBox"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit2>
       <Unit3>
         <Filename Value="Splash.pas"/>
@@ -65,11 +78,12 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
-        <SyntaxMode Value="delphi"/>
+        <SyntaxMode Value="Delphi"/>
       </SyntaxOptions>
     </Parsing>
     <Linking>
